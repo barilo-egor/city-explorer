@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Городской путеводитель</title>
+</head>
+<body th:align="center">
+<header th:insert="fragments/header.html"></header>
+<table th:align="center">
+    <tr>
+        <th>Город</th>
+        <th>Описание</th>
+    </tr>
+    <tr th:each="city : ${cities}">
+        <td th:text="${city.name}"></td>
+        <td th:text="${city.description.length > 15 ? city.description.substring(0, 15).concat('...') : city.description}"></td>
+        <td><a th:href="@{/cities/find/{name}(name=${city.name})}">Открыть</a></td>
+    </tr>
+</table>
+</body>
+</html>

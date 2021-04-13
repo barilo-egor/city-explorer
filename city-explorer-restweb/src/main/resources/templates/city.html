@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Город ' + ${city.name}"></title>
+</head>
+<body th:align="center">
+<header th:insert="fragments/header.html"></header>
+
+<p><b>Город:</b></p>
+<p th:text="${city.name}"></p>
+<p><b>Описание:</b></p>
+<p th:text="${city.description}"></p>
+<a th:href="@{/cities/edit/{name}(name=${city.name})}">Изменить</a> |
+<a th:href="@{/cities/delete/{name}(name=${city.name})}">Удалить</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Изменение города ' + ${city.name}"></title>
+</head>
+<body th:align="center">
+<header th:insert="fragments/header.html"></header>
+<h3>Введите новые данные.</h3>
+<form action="#" th:action="@{/cities/edit/{id}(id=${city.id})}" th:object="${city}" method="post">
+    <p>Имя: <label>
+        <input type="text" th:field="*{name}" th:value="${city.name}"/>
+    </label></p>
+    <p>Описание: <label>
+        <input type="text" th:field="*{description}" th:value="${city.description}"/>
+    </label></p>
+    <input type="submit" value="Сохранить"/>
+</form>
+
+</body>
+</html>
