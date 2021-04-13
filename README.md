@@ -15,7 +15,7 @@ linux </br>
   <li>Порт, на котором будет запущен веб сервис. </br>
   <b><i>project-directory</i>/city-explorer-restweb/src/resources/restweb.properties</b></br>
   <code>server.port</code></br>
-  <li>Логин и пароль пользователя MySQL. </b>
+  <li>Логин и пароль пользователя MySQL. </br>
   <b><i>project-directory</i>/city-explorer-core/src/resources/application.properties</b></br>
   <code>spring.datasource.username</code></br>
   <code>spring.datasource.password</code></br>
